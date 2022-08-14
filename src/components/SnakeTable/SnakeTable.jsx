@@ -64,9 +64,9 @@ export const SnakeTable = () => {
         const context = canvasRef.current.getContext("2d");
         context.setTransform(SCALE, 0, 0, SCALE, 0, 0);
         context.clearRect(0, 0, window.innerWidth, window.innerHeight);
-        context.fillStyle = "red";
-        snake.forEach(([x, y]) => context.fillRect(x, y, 1, 1));
         context.fillStyle = "black";
+        snake.forEach(([x, y]) => context.fillRect(x, y, 1, 1));
+        context.fillStyle = "red";
         context.fillRect(apple[0], apple[1], 1, 1);
     }, [snake, apple, gameOver]);
 

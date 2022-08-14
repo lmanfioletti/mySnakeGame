@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    justify-items: flex-end !important;
+    align-items: flex-start !important;
+}
+
+.score-title {
+    align-self: flex-start;
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+.level-title {
+    padding-left: 5rem;
+    align-self: flex-end;
+    font-weight: 600;
+    font-size: 4rem;
+}
