@@ -1,13 +1,13 @@
-import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Select, Text } from "@chakra-ui/react"
+import { Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Select, Text } from "@chakra-ui/react"
 import { useSnakeContext } from "../hooks/useSnake";
 
 export const GameOverModal = () => {
 
-    const { isOpen, score, startGame, setLevel, level, onClose } = useSnakeContext();
+    const { isOpen, score, startGame, setLevel, level } = useSnakeContext();
 
     return (
         <>
-            <Modal isCentered isOpen={isOpen} onClose={onClose}>
+            <Modal isCentered isOpen={isOpen} >
                 <ModalOverlay
                     bg='none'
                     backdropFilter='auto'
@@ -16,7 +16,6 @@ export const GameOverModal = () => {
                 />
                 <ModalContent>
                     <ModalHeader>{score ? "Você perdeu." : "Bem vindo ao Snake Game"}</ModalHeader>
-                    <ModalCloseButton />
                     <ModalBody>
                         <Text>{
                             score ? "Seu score foi de " + score :

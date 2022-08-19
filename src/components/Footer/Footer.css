@@ -1,7 +1,5 @@
 .container {
     display: flex;
-    justify-items: flex-end !important;
-    align-items: flex-start !important;
 }
 
 .score-title {
